@@ -1,0 +1,48 @@
+﻿<div class="page-container">
+    <!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
+    <div class="sidebar-menu">
+        <leftmenu></leftmenu>
+    </div>
+    <div class="main-content">
+
+        <div class="row">
+
+            <div class="col-md-6 col-sm-8 clearfix">
+                <ul class="user-info pull-left pull-none-xsm">
+                    <profileinfo></profileinfo>
+                </ul>
+            </div>
+            <div class="col-md-6 col-sm-4 clearfix hidden-xs">
+
+                <ul class="list-inline links-list pull-right">
+                    <li>
+                        <a (click)="logout()" style="cursor: pointer;">
+                            Log Out <i class="entypo-logout right"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <!--<a routerLink="" routerLinkActive="active">main</a>
+            <a routerLink="selfservice" routerLinkActive="active">Task List</a>
+            <a routerLink="selfservice/leaverequest" routerLinkActive="active">Leave Request</a>
+            <a routerLink="selfservice/loanrequest" routerLinkActive="active">Loan Request</a>-->
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+        <hr />
+        <!-- Footer -->
+        <footer>
+            <div class="col-md-11" style="position: absolute; bottom: 1px; text-align:center">
+                <div class="col-md-11" style="position: absolute; bottom: 1px;">Copyright &copy; 2018 SETS</div>
+
+
+            </div>
+        </footer>
+    </div>
+</div>

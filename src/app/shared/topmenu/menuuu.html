@@ -1,0 +1,43 @@
+﻿<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand">Project Name</a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a data-submenu="" data-toggle="dropdown" tabindex="0" aria-expanded="false">
+                    Menu 1<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="">
+                        <a tabindex="0">Menu 4</a>
+                    </li>
+                    <li ng-reflect-class-name="dropdown-submenu" class="dropdown-submenu">
+                        <a tabindex="0">Menu 5</a>
+                        <ul class="dropdown-menu">
+                            <li class="">
+                                <a tabindex="0">Menu 4</a>
+                            </li>
+                            <li class="">
+                                <a tabindex="0">Menu 5</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown open">
+                <a data-submenu="" data-toggle="dropdown" tabindex="0" aria-expanded="true">
+                    Menu 2<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu"></ul>
+            </li>
+        </ul>
+    </div>
+</nav>

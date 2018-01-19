@@ -1,0 +1,136 @@
+﻿<div role="navigation">
+    <div class="container">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li *ngFor="let menu of Menus">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ menu.desc }}<b class="caret"></b></a>
+                </li>
+                <li *ngFor="let menu of Menus">
+                    <menuitem [MenuItem]="menu"></menuitem>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div role="navigation">
+    <div class="container">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 1 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action [Menu 1.1]</a></li>
+                        <li><a href="#">Another action [Menu 1.1]</a></li>
+                        <li><a href="#">Something else here [Menu 1.1]</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link [Menu 1.1]</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link [Menu 1.1]</a></li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown [Menu 1.1] <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action [Menu 1.2]</a></li>
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown [Menu 1.2] <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown [Menu 1.3] <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Action [Menu 1.4]</a></li>
+                                                <li><a href="#">Another action [Menu 1.4]</a></li>
+                                                <li><a href="#">Something else here [Menu 1.4]</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link [Menu 1.4]</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">One more separated link [Menu 1.4]</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 2 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action [Menu 2.1]</a></li>
+                        <li><a href="#">Another action [Menu 2.1]</a></li>
+                        <li><a href="#">Something else here [Menu 2.1]</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link [Menu 2.1]</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link [Menu 2.1]</a></li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown [Menu 2.1] <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action [Menu 2.2]</a></li>
+                                <li><a href="#">Another action [Menu 2.2]</a></li>
+                                <li><a href="#">Something else here [Menu 2.2]</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link [Menu 2.2]</a></li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown [Menu 2.2] <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown [Menu 2.3] <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Action [Menu 2.4]</a></li>
+                                                <li><a href="#">Another action [Menu 2.4]</a></li>
+                                                <li><a href="#">Something else here [Menu 2.4]</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link [Menu 2.4]</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">One more separated link [Menu 2.4]</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+<nav>
+    <ul class="content clearfix">
+        <li><a href="#">Nav 1</a></li>
+        <li><a href="#">Nav 2</a></li>
+        <li class="dropdown">
+            <a href="#">Nav 3</a>
+            <ul class="sub-menu">
+                <li><a href="#">Nav 3.1</a></li>
+                <li><a href="#">Nav 3.2</a></li>
+                <li><a href="#">Nav 3.3</a></li>
+                <li class="dropdown">
+                    <a href="#">Nav 3.4</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Nav 3.4.1</a></li>
+                        <li class="dropdown">
+                            <a href="#">Nav 3.4.2</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Nav 3.4.2.1</a></li>
+                                <li><a href="#">Nav 3.4.2.2</a></li>
+                                <li><a href="#">Nav 3.4.2.3</a></li>
+                                <li><a href="#">Nav 3.4.2.4</a></li>
+                                <li><a href="#">Nav 3.4.2.5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Nav 3.4.3</a></li>
+                        <li><a href="#">Nav 3.4.4</a></li>
+                        <li><a href="#">Nav 3.4.5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nav 3.5</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Nav 4</a></li>
+        <li><a href="#">Nav 5</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,8 @@
+﻿<nav>
+    <ul class="content clearfix">
+        <li *ngFor="let menu of Menus" [class]="getClass(menu)">
+            <a *ngIf="!menu.menus" href="#">{{ menu.desc }}</a>
+            <menuitem *ngIf="menu.menus" [MenuItem]="menu"></menuitem>
+        </li>
+    </ul>
+</nav>

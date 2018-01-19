@@ -1,0 +1,9 @@
+{
+    "System Architect": "Progettista IT",
+    "Accountant": "Ragioniere",
+    "Junior Technical Author": "Scrittore tecnico Junior",
+    "Senior Javascript Developer": "Programmatore Javascript Senior",
+    "ORDER_BY_POSITION": "Ordine per impiego",
+    "ORDER_BY_DESC_POSITION": "Ordine descrescente per impiego",
+    "SEARCH_BY_POSITION": "Ricerca per impiego"
+}

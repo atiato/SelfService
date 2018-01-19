@@ -1,0 +1,22 @@
+﻿<navbar></navbar>
+<div class="no-skin">
+    <div class="main-container ace-save-state" id="main-container">
+        <table>
+            <tr>
+                <td style="vertical-align:top">
+                    <div><navlist></navlist></div>
+                </td>
+                <td style="vertical-align:top">
+                    <div>
+                        <a routerLink="" routerLinkActive="active">main</a>
+                        <a routerLink="selfservice" routerLinkActive="active">Task List</a>
+                        <a routerLink="selfservice/leaverequest" routerLinkActive="active">Leave Request</a>
+                        <a routerLink="selfservice/loanrequest" routerLinkActive="active">Loan Request</a>
+                        <br />
+                        <router-outlet></router-outlet>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

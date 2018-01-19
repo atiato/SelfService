@@ -1,0 +1,70 @@
+﻿<div>
+    <style>
+
+        .form-horizontal .form-group {
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+        }
+
+        .panel-heading {
+            display: block !important;
+            font-size: 18px !important;
+            background: none !important;
+            border: 0 none !important;
+            position: relative !important;
+            text-transform: uppercase !important;
+        }
+    </style>
+    <form name="LeaveRequestForm" class="form-horizontal col-lg-12 shadow-2" #authForm="ngForm" (submit)="submitRequest()">
+        <div [hidden]="leaveSubmited">
+            <div class="panel panel-default" style="border: none;">
+                <div class="panel-body">
+                    <div class="panel-heading">
+                        Submit Leave Request
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="form-group required col-lg-6 ">
+                                <label for="inputLeaveType" class="control-label">Leave Type</label>
+                                <div>
+                                    <select id="inputLeaveType" class="form-control selectpicker" name="inputLeaveType" [(ngModel)]="leaveTypeId" (change)="onLeaveTypeChange($event.target.value)">
+                                        <!--<option *ngFor="let leaveType of store.leaveTypes | async" [value]="leaveType.id">{{leaveType.description}}</option>-->
+                                        <option>Sick Leave</option>
+                                        <option>Annual Leave</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group required col-lg-6 ">
+                                <label for="txtBalance" class="control-label">Balance</label>
+                                <input id="txtBalance" class="form-control" value="{{ selfServiceStore.userBalance | async }}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group required col-lg-4 ">
+                                <label for="txtFromDate" class="control-label">From Date</label>
+                                <input id="txtFromDate" class="form-control" type="date" name="txtFromDate" (change)="onBlurMethod()" [(ngModel)]="fromDate" />
+                            </div>
+                            <div class="form-group required col-lg-4 ">
+                                <label for="txtToDate" class="control-label">To Date</label>
+                                <input id="txtToDate" type="date" class="form-control" name="txtToDate" (change)="onBlurMethod()" [(ngModel)]="toDate" />
+                            </div>
+                            <div class="form-group required col-lg-4 ">
+                                <label for="inputReason" class="control-label">Duty Days</label>
+                                <input id="txtToDate" type="number" class="form-control" name="txtDudyDays" value="{{selfServiceStore.employeeDayDuty | async}}" readonly="readonly" />
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-12">
+                                <button type="submit" style="width:120px; font-size:18px;" class="btn btn-lg btn-outline-primary">Sumbit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div [hidden]="!leaveSubmited" class="alert alert-success" style="width: 500px">
+            Your leave request is submitted successfully.
+        </div>
+    </form>
+</div>

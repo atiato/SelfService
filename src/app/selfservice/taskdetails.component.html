@@ -1,0 +1,120 @@
+﻿<style>
+
+    .form-horizontal .form-group {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+    .panel-heading {
+        display: block !important;
+        font-size: 18px !important;
+        background: none !important;
+        border: 0 none !important;
+        position: relative !important;
+        /*text-transform: uppercase !important;*/
+        padding: 0px !important;
+    }
+
+    .panel-body {
+        /*padding: 0px !important;*/
+    }
+</style>
+
+
+<div style="padding: 0px 0px 3px 0px">
+    <div class="col-12" style=" border: 1px solid grey; background-color: #EEEEEE; width: 100%; text-align: left;" role="group" aria-label="Basic example">
+
+        <button class="btn btn-light col-4" type="button" routerLink="../../../tasklist"
+                style="color:#5196d4; margin: 5px;background-color: white;">
+            <span class="glyphicon glyphicon-arrow-left"></span> Go back to Task List
+        </button>
+        <button class="btn btn-outline-success col-4" type="button"
+                style="color:green; margin: 5px;background-color: white;" (click)="approveRequest()">
+            <span class="glyphicon glyphicon-ok-sign"> </span> Approve
+        </button>
+        <button class="btn btn-outline-success col-4 " type="button"
+                style="color:red; margin: 5px;background-color: white;" (click)="rejectRequest()">
+            <span class="glyphicon glyphicon-remove-sign"> </span> Reject
+        </button>
+
+    </div>
+</div>
+<form class="form-horizontal col-lg-12 shadow-2">
+    <div class="form-row" *ngIf="instance && instance.PersonName">
+        <div class="panel panel-default" style="border: none;">
+            <div class="panel-body">
+                <div class="panel-heading">
+                    Employee Information
+                    <hr />
+                </div>
+                <div class="panel-body" style="padding-top:0px">
+                    <div class="row">
+                        <div class="form-group required col-lg-6 ">
+                            <label for="txtRequestedBy" class="control-label">Requested By</label>
+                            <input id="txtRequestedBy" class="form-control" readonly="readonly" value=" {{instance.PersonName}}" />
+                        </div>
+                        <div class="form-group required col-lg-6 ">
+                            <label for="txtRequestedDate" class="control-label">Requested Date</label>
+                            <input id="txtRequestedDate" class="form-control" readonly="readonly" value="{{instance.RequestedDate}}" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group required col-lg-6 ">
+                            <label for="txtOnBehalf" class="control-label">Is On Behalf</label>
+                            <input id="txtOnBehalf" class="form-control" readonly="readonly" value="{{instance.IsOnBehalf}}" />
+                        </div>
+                        <div class="form-group required col-lg-6 ">
+                            <label for="txtStatus" class="control-label">Status</label>
+                            <input id="txtStatus" class="form-control" readonly="readonly" value="{{instance.TaskStatusDisplay}}" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="panel-heading">
+                    Leave Request Details
+                    <hr />
+                </div>
+                <div class="panel-body" style="padding-top:0px">
+                    <div class="row">
+                        <div class="form-group required col-lg-6 ">
+                            <label for="txtLeaveType" class="control-label">Leave Type</label>
+                            <input id="txtLeaveType" class="form-control" readonly="readonly" value="{{instance.LeaveType}}" />
+                        </div>
+                        <div class="form-group required col-lg-6 ">
+                            <label for="txtStatus" class="control-label">Available Balance</label>
+                            <input id="txtStatus" class="form-control" readonly="readonly" value="{{instance.AvailableBalance}}" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group required col-lg-4">
+                            <label for="txtFromDate" class="control-label">From Date</label>
+                            <input id="txtFromDate" class="form-control" readonly="readonly" value="{{instance.FromDateDisplay}}" />
+                            <input id="txtFromDate" class="form-control" readonly="readonly"
+                                   *ngIf="!instance.IsFullDay" value="{{instance.FromTimeDisplay}}" />
+                        </div>
+                        <div class="form-group required col-lg-4">
+                            <label for="txtToDate" class="control-label">To Date</label>
+                            <input id="txtToDate" class="form-control" readonly="readonly" value="{{instance.ToDateDisplay}}" />
+                            <input id="txtToDate" class="form-control" readonly="readonly"
+                                   *ngIf="!instance.IsFullDay" value="{{instance.ToTimeDisplay}}" />
+                        </div>
+                        <div class="form-group required col-lg-4">
+                            <label for="txtDuration" class="control-label">
+                                Duration in <span *ngIf="instance.IsFullDay"> Working Day(s)</span>
+                                <span *ngIf="!instance.IsFullDay"> Hour(s)</span>
+                            </label>
+                            <input id="txtDuration" class="form-control" readonly="readonly" value="{{instance.Duration}}" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group required col-lg-12">
+                            <label for="txtRemark" class="control-label">Remark</label>
+                            <input id="txtRemark" class="form-control" readonly="readonly" value="{{instance.Notes}}" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
