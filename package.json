@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "webpack --config webpack.spec.ts --progress --color && karma start",
-    "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 5000  --content-base src --host 192.168.1.45",
+    "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --content-base src",
     "deploy": "webpack --optimize-minimize --define process.env.NODE_ENV='prod",
     "api": "angularclass-server --api retain --port 3500",
     "clean": "del -rf dist",
