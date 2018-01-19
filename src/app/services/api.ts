@@ -26,7 +26,7 @@ export class ApiService extends ServiceBase {
     //http://foundation-latest.192.168.56.100.nip.io
     api_url_linux: string = 'http://foundation-change.192.168.56.100.nip.io';
     //api_url_linux: string = 'http://localhost';
-    api_url_windows: string = 'http://192.168.1.45';
+    api_url_windows: string = 'http://172.20.10.2';
     //api_url: string = 'http://localhost';
 
     constructor(private http: Http, private router: Router) {
